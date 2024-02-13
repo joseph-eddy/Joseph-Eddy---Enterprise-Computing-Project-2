@@ -45,7 +45,7 @@ public class account {
 			lock.lock();
 			// generates and deposits random num 1-500
 			Random random = new Random();
-			int randomNum = random.nextInt(500);
+			int randomNum = random.nextInt(500)+1;
 			accountBalance += randomNum;
 			// print to console
             System.out.println("Agent DT" + threadNum + " deposits $" + randomNum + 
@@ -106,7 +106,7 @@ public class account {
 			lock.lock();
 			// generate and withdraw random number 1-99
 			Random random = new Random();
-			int randomNum = random.nextInt(99);
+			int randomNum = random.nextInt(99)+1;
 			// if the amount requested is greater than the amount in the account, thread gets disregarded
 			while(accountBalance<randomNum) {
 				System.out.println("\t\t\t\tAgent WT" + threadNum + " withdraws $" + randomNum +
